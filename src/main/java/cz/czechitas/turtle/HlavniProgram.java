@@ -20,15 +20,15 @@ public class HlavniProgram {
         cernaBarva = new Color(0, 0, 0);
         /*
         posun(-400, 0);
-        naklesliCtverec(90.5, cervenaBarva);
+        nakresliCtverec(90.5, cervenaBarva);
         posun(150, 0);
-        naklesliObdelnik(70.74, 36.92, new Color(0, 200, 0));
+        nakresliObdelnik(70.74, 36.92, new Color(0, 200, 0));
         posun(100, 0);
-        naklesliRovnostrannyTrojuhelnik(111.4, cervenaBarva);
+        nakresliRovnostrannyTrojuhelnik(111.4, cervenaBarva);
         posun(150, 0);
-        naklesliRovnoramennyPravouhlyTrojuhelnik(83.6, new Color(0, 100, 250));
+        nakresliRovnoramennyPravouhlyTrojuhelnik(83.6, new Color(0, 100, 250));
         posun(200, 0);
-        naklesliRovnoramennyTrojuhelnik(73, 55, cervenaBarva);
+        nakresliRovnoramennyTrojuhelnik(73, 55, cervenaBarva);
         posun(150, 0);
         nakresliKruznici(70, new Color(255, 0, 255));
         */
@@ -37,7 +37,7 @@ public class HlavniProgram {
         posun(-350, 30);
 
         zofka.turnLeft(180);
-        naklesliRovnoramennyTrojuhelnik(250.25, 70, new Color(200, 150, 0));
+        nakresliRovnoramennyTrojuhelnik(250.25, 70, new Color(200, 150, 0));
         zofka.turnLeft(180);
         posun(0, 60);
         nakresliKruznici(102.25, cervenaBarva);
@@ -66,14 +66,14 @@ public class HlavniProgram {
         // Mašinka
         posun(320, -70);
 
-        naklesliObdelnik(200, 120.5, cervenaBarva);
+        nakresliObdelnik(200, 120.5, cervenaBarva);
         posun(60.25, 0);
         nakresliKruznici(60.25, cernaBarva);
         posun(-60.25, 0);
         zofka.turnLeft(90);
-        naklesliObdelnik(180, 110, cervenaBarva);
+        nakresliObdelnik(180, 110, cervenaBarva);
         zofka.move(180);
-        naklesliRovnoramennyPravouhlyTrojuhelnik(110, new Color(0, 0, 250));
+        nakresliRovnoramennyPravouhlyTrojuhelnik(110, new Color(0, 0, 250));
         zofka.turnRight(90);
         posun(45, -30.225);
         nakresliKruznici(30.225, cernaBarva);
@@ -84,7 +84,7 @@ public class HlavniProgram {
         posun(-320, 70);
     }
 
-    public void naklesliCtverec(double delkaStrany, Color barvaCary) {
+    public void nakresliCtverec(double delkaStrany, Color barvaCary) {
         zofka.setPenColor(barvaCary);
         for (int i = 0; i < 4; i++) {
             zofka.move(delkaStrany);
@@ -92,7 +92,7 @@ public class HlavniProgram {
         }
     }
 
-    public void naklesliObdelnik(double delkaPrvniStrany, double delkaDruheStrany, Color barvaCary) {
+    public void nakresliObdelnik(double delkaPrvniStrany, double delkaDruheStrany, Color barvaCary) {
         zofka.setPenColor(barvaCary);
         for (int i = 0; i < 2; i++) {
             zofka.move(delkaPrvniStrany);
@@ -111,7 +111,7 @@ public class HlavniProgram {
         zofka.penDown();
     }
 
-    public void naklesliRovnostrannyTrojuhelnik(double delkaStrany, Color barvaCary) {
+    public void nakresliRovnostrannyTrojuhelnik(double delkaStrany, Color barvaCary) {
         zofka.setPenColor(barvaCary);
         zofka.turnRight(30);
         for (int i = 0; i < 3; i++) {
@@ -121,7 +121,7 @@ public class HlavniProgram {
         zofka.turnLeft(30);
     }
 
-    public void naklesliRovnoramennyPravouhlyTrojuhelnik(double velikostPrepony, Color barvaCary) {
+    public void nakresliRovnoramennyPravouhlyTrojuhelnik(double velikostPrepony, Color barvaCary) {
         zofka.setPenColor(barvaCary);
         zofka.turnRight(45);
         var velikostOdvesny = Math.sqrt(Math.pow(velikostPrepony, 2) / 2);
@@ -133,7 +133,7 @@ public class HlavniProgram {
         zofka.turnRight(90);
     }
 
-    public void naklesliRovnoramennyTrojuhelnik(double odvesna, int uhelUPrepony, Color barvaCary) {
+    public void nakresliRovnoramennyTrojuhelnik(double odvesna, int uhelUPrepony, Color barvaCary) {
         zofka.setPenColor(barvaCary);
         zofka.turnLeft(90);
         var x = (Math.cos(Math.toRadians(uhelUPrepony))) * odvesna;
